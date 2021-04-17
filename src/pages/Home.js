@@ -4,7 +4,7 @@ import Categories from '../containers/Categories';
 
 import { marketSections } from '../assets/data/marketplaceSections';
 
-import { displaySection } from '../helpers/sectionHelpers';
+import { displaySection, displayCategories } from '../helpers/sectionHelpers';
 
 const Home = () => (
   <div className="slider-container grabbing">
@@ -12,7 +12,7 @@ const Home = () => (
 
       <TrendingSection display={displaySection} />
 
-      <Categories display={displaySection} />
+      <Categories display={displayCategories} />
 
       {marketSections.map((section) => (
         <section key={section.class} className={section.class}>

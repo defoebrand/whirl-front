@@ -1,7 +1,7 @@
 .slider-container {
   height: 100vh;
   display: inline-flex;
-  overflow: hidden;
+  // overflow: hidden;
   transform: translateX(0);
   transition: transform 0.3s ease-out;
   cursor: grab;
