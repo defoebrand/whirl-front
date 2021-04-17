@@ -2,28 +2,25 @@ import PropTypes from 'prop-types';
 
 const Advertisement = ({
   followers, platformLogo, companyLogo, price,
-}) => {
-  console.log(platformLogo);
-  return (
-    <a href="www.google.com" className="__advertisement-carousel">
-      <div className="inner-carousel">
-        <div className="__top">
-          <button type="button">
-            <img src={followers} alt="" />
-          </button>
-          <button type="button">
-            <img src={platformLogo} alt="" />
-          </button>
-        </div>
-        <div className="__bottom">
-          <img src={companyLogo} alt="" />
-          <h3>{price}</h3>
-        </div>
+}) => (
+  <a href="www.google.com" className="__advertisement-carousel">
+    <div className="inner-carousel">
+      <div className="__top">
+        <button type="button">
+          <img src={followers} alt="" />
+        </button>
+        <button type="button">
+          <img src={platformLogo} alt="" />
+        </button>
       </div>
-      <p>@username</p>
-    </a>
-  );
-};
+      <div className="__bottom">
+        <img src={companyLogo} alt="" />
+        <h3>{price}</h3>
+      </div>
+    </div>
+    <p>@username</p>
+  </a>
+);
 
 Advertisement.propTypes = {
   followers: PropTypes.string,

@@ -30,7 +30,15 @@ const marketPlace = [{
   price: '$25,000',
 }];
 
-const sections = [{
+const categories = [{
+  image: '../multimedia/img/icons/marketplace/style-icon.png',
+  title: 'Style',
+}, {
+  image: '../multimedia/img/icons/marketplace/tech-icon.png',
+  title: 'Tech',
+}];
+
+const marketSections = [{
   class: '__third-marketplace-section',
   title: '1M+ Followers',
   marketPlace,
@@ -48,12 +56,4 @@ const sections = [{
   marketPlace,
 }];
 
-const categories = [{
-  image: '../multimedia/img/icons/marketplace/style-icon.png',
-  title: 'Style',
-}, {
-  image: '../multimedia/img/icons/marketplace/tech-icon.png',
-  title: 'Tech',
-}];
-
-export { marketPlace, sections, categories };
+export { marketPlace, categories, marketSections };

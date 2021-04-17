@@ -2,17 +2,19 @@ import MarketPlaceSection from '../containers/MarketPlaceSection';
 import TrendingSection from '../containers/TrendingSection';
 import Categories from '../containers/Categories';
 
-import { marketPlace, sections } from '../assets/data/marketplaceSections';
+import { marketSections } from '../assets/data/marketplaceSections';
+
+import { displaySection } from '../helpers/sectionHelpers';
 
 const Home = () => (
   <div className="slider-container grabbing">
     <div className="slide">
 
-      <TrendingSection marketPlace={marketPlace} />
+      <TrendingSection display={displaySection} />
 
-      <Categories />
+      <Categories display={displaySection} />
 
-      {sections.map((section) => (
+      {marketSections.map((section) => (
         <section key={section.class} className={section.class}>
           <MarketPlaceSection title={section.title} marketPlace={section.marketPlace} />
         </section>

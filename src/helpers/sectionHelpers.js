@@ -1,18 +1,21 @@
 import Advertisement from '../components/Advertisement';
+import Category from '../components/Category';
 
-const displaySection = (marketSection) => {
-  marketSection.map((ad) => {
-    const adkey = ad.platformLogo === '' ? ad.followers : ad.platformLogo.split('__')[1].split('-logo')[0] + ad.companyLogo.split('marketplace/')[1].split('.png')[0];
-    return (
-      <Advertisement
-        key={adkey}
-        followers={ad.followers}
-        platformLogo={ad.platformLogo}
-        companyLogo={ad.companyLogo}
-        price={ad.price}
-      />
-    );
-  });
-};
+const displaySection = (marketSection) => (
+  marketSection.map((ad) => (
+    <Advertisement
+      key={ad.followers + ad.platformLogo}
+      followers={ad.followers}
+      platformLogo={ad.platformLogo}
+      companyLogo={ad.companyLogo}
+      price={ad.price}
+    />
+  )));
 
-export default displaySection;
+const displayCategories = (categories) => (
+  categories.map((category) => (
+    <Category key={category.title} title={category.title} image={category.image} />
+  ))
+);
+
+export { displaySection, displayCategories };

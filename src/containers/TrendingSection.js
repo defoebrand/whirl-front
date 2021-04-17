@@ -1,28 +1,22 @@
 import PropTypes from 'prop-types';
 
-import displaySection from '../helpers/sectionHelpers';
+import { marketPlace } from '../assets/data/marketplaceSections';
 
-const TrendingSection = ({ marketPlace }) => (
+const TrendingSection = ({ display }) => (
   <section className="__first-marketplace-section">
     <div className="__outer-sub-section">
       <div className="__center-title">
         <h1>Trending</h1>
       </div>
       <div className="__center-sub-section">
-        {displaySection(marketPlace)}
+        {display(marketPlace)}
       </div>
     </div>
   </section>
 );
 
 TrendingSection.propTypes = {
-  marketPlace: PropTypes.arrayOf(
-    PropTypes.shape(),
-  ),
-};
-
-TrendingSection.defaultProps = {
-  marketPlace: [{}],
+  display: PropTypes.func.isRequired,
 };
 
 export default TrendingSection;
