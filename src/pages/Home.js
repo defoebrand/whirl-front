@@ -1,6 +1,38 @@
-import Advertisement from '../components/Advertisement';
+import displaySection from '../helpers/sectionHelpers';
 
-import { firstMarketplace, thirdMarketplace } from '../assets/data/marketplaceSections';
+import { firstMarketplace, thirdMarketplace, fourthMarketplace } from '../assets/data/marketplaceSections';
+
+const fifthMarketplace = [{
+  followers: '../multimedia/img/icons/marketplace/followers/100k.png',
+  platformLogo: '../multimedia/img/icons/social/light/__tiktok-logo.png',
+  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
+  price: '$25,000',
+}, {
+  followers: '../multimedia/img/icons/marketplace/followers/5m.png',
+  platformLogo: '../multimedia/img/icons/social/light/__youtube-logo.png',
+  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
+  price: '$25,000',
+}, {
+  followers: '../multimedia/img/icons/marketplace/followers/10k.png',
+  platformLogo: '../multimedia/img/icons/social/light/__instagram-logo.png',
+  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
+  price: '$25,000',
+}, {
+  followers: '../multimedia/img/icons/marketplace/followers/10m.png',
+  platformLogo: '../multimedia/img/icons/social/light/__twitter-logo.png',
+  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
+  price: '$25,000',
+}, {
+  followers: '../multimedia/img/icons/marketplace/followers/10m.png',
+  platformLogo: '../multimedia/img/icons/social/light/__snap-logo.png',
+  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
+  price: '$25,000',
+}, {
+  followers: '../multimedia/img/icons/marketplace/followers/10m.png',
+  platformLogo: '../multimedia/img/icons/social/light/__fb-logo.png',
+  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
+  price: '$25,000',
+}];
 
 const Home = () => (
   <div className="slider-container grabbing">
@@ -11,18 +43,7 @@ const Home = () => (
             <h1>Trending</h1>
           </div>
           <div className="__center-sub-section">
-            {firstMarketplace.map((ad) => {
-              const adkey = ad.platformLogo.split('__')[1].split('-logo')[0] + ad.companyLogo.split('marketplace/')[1].split('.png')[0];
-              return (
-                <Advertisement
-                  key={adkey}
-                  followers={ad.followers}
-                  platformLogo={ad.platformLogo}
-                  companyLogo={ad.companyLogo}
-                  price={ad.price}
-                />
-              );
-            })}
+            {displaySection(firstMarketplace)}
           </div>
         </div>
       </section>
@@ -61,18 +82,24 @@ const Home = () => (
             </a>
           </div>
           <div className="__center-sub-section">
-            {thirdMarketplace.map((ad) => {
-              const adkey = ad.platformLogo.split('__')[1].split('-logo')[0] + ad.companyLogo.split('marketplace/')[1].split('.png')[0];
-              return (
-                <Advertisement
-                  key={adkey}
-                  followers={ad.followers}
-                  platformLogo={ad.platformLogo}
-                  companyLogo={ad.companyLogo}
-                  price={ad.price}
-                />
-              );
-            })}
+            {displaySection(thirdMarketplace)}
+          </div>
+        </div>
+      </section>
+
+      <section className="__fourth-marketplace-section">
+        <div className="__outer-sub-section">
+          <div className="__center-title">
+            <h2>500k-1M Followers</h2>
+            <a href="../" className="category">
+              <img src="../multimedia/img/icons/marketplace/__More-icon.png" alt="" />
+              <h1>
+                More
+              </h1>
+            </a>
+          </div>
+          <div className="__center-sub-section">
+            {displaySection(fourthMarketplace)}
           </div>
         </div>
       </section>
