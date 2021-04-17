@@ -6,10 +6,10 @@ const MarketPlaceSection = ({ title, marketPlace }) => (
   <div className="__outer-sub-section">
     <div className="__center-title">
       <h2>{title}</h2>
-      <a href="../" className="category">
-        <img src="../multimedia/img/icons/marketplace/__More-icon.png" alt="" />
+      <div className="category">
+        <img src="../images/marketplace/__more-icon.png" alt="" />
         <h1>More</h1>
-      </a>
+      </div>
     </div>
     <div className="__center-sub-section">
       {displaySection(marketPlace)}
