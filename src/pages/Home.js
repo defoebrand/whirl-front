@@ -1,38 +1,8 @@
 import displaySection from '../helpers/sectionHelpers';
 
-import { firstMarketplace, thirdMarketplace, fourthMarketplace } from '../assets/data/marketplaceSections';
-
-const fifthMarketplace = [{
-  followers: '../multimedia/img/icons/marketplace/followers/100k.png',
-  platformLogo: '../multimedia/img/icons/social/light/__tiktok-logo.png',
-  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
-  price: '$25,000',
-}, {
-  followers: '../multimedia/img/icons/marketplace/followers/5m.png',
-  platformLogo: '../multimedia/img/icons/social/light/__youtube-logo.png',
-  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
-  price: '$25,000',
-}, {
-  followers: '../multimedia/img/icons/marketplace/followers/10k.png',
-  platformLogo: '../multimedia/img/icons/social/light/__instagram-logo.png',
-  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
-  price: '$25,000',
-}, {
-  followers: '../multimedia/img/icons/marketplace/followers/10m.png',
-  platformLogo: '../multimedia/img/icons/social/light/__twitter-logo.png',
-  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
-  price: '$25,000',
-}, {
-  followers: '../multimedia/img/icons/marketplace/followers/10m.png',
-  platformLogo: '../multimedia/img/icons/social/light/__snap-logo.png',
-  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
-  price: '$25,000',
-}, {
-  followers: '../multimedia/img/icons/marketplace/followers/10m.png',
-  platformLogo: '../multimedia/img/icons/social/light/__fb-logo.png',
-  companyLogo: '../multimedia/img/icons/marketplace/yourlogohere.png',
-  price: '$25,000',
-}];
+import {
+  firstMarketplace, thirdMarketplace, fourthMarketplace, fifthMarketplace, sixthMarketplace,
+} from '../assets/data/marketplaceSections';
 
 const Home = () => (
   <div className="slider-container grabbing">
@@ -103,6 +73,41 @@ const Home = () => (
           </div>
         </div>
       </section>
+
+      <section className="__fifth-marketplace-section">
+        <div className="__outer-sub-section">
+          <div className="__center-title">
+            <h2>Under 500k Followers</h2>
+            <a href="../" className="category">
+              <img src="../multimedia/img/icons/marketplace/__More-icon.png" alt="" />
+              <h1>
+                More
+              </h1>
+            </a>
+          </div>
+          <div className="__center-sub-section" />
+          {displaySection(fifthMarketplace)}
+        </div>
+      </section>
+
+      <section className="__sixth-marketplace-section">
+        <div className="__outer-sub-section">
+          <div className="__center-title">
+            <h2>Under 25k Followers</h2>
+            <a href="../" className="category">
+              <img src="../multimedia/img/icons/marketplace/__More-icon.png" alt="" />
+              <h1>
+                More
+              </h1>
+            </a>
+          </div>
+          <div className="__center-sub-section">
+            {displaySection(sixthMarketplace)}
+
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 );
