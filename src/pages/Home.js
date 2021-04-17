@@ -1,95 +1,83 @@
 import Advertisement from '../components/Advertisement';
 
-const Home = () => (
-  <section className="__first-marketplace-section">
-    <div className="__outer-sub-section">
-      <h1 className="__center-title">Trending</h1>
-      <div className="__center-sub-section">
-        <Advertisement followers="../multimedia/img/icons/marketplace/followers/100k.png" platformLogo="../multimedia/img/icons/social/light/__tiktok-logo.png" companyLogo="../multimedia/img/icons/marketplace/yourlogohere.png" price="$25,000" />
-        <a href="www.google.com" className="__advertisement-carousel">
-          <div className="inner-carousel">
-            <div className="__top">
-              <button type="button">
-                <img src="../multimedia/img/icons/marketplace/followers/5m.png" alt="" />
-              </button>
-              <button type="button">
-                <img src="../multimedia/img/icons/social/light/__youtube-logo.png" alt="" />
-              </button>
-            </div>
-            <div className="__bottom">
-              <img src="../multimedia/img/icons/marketplace/yourlogohere.png" alt="" />
-              <h3>$25,000</h3>
-            </div>
-          </div>
-        </a>
-        <a href="www.google.com" className="__advertisement-carousel">
-          <div className="inner-carousel">
-            <div className="__top">
-              <button type="button">
-                <img src="../multimedia/img/icons/marketplace/followers/10k.png" alt="" />
-              </button>
-              <button type="button">
-                <img src="../multimedia/img/icons/social/light/__instagram-logo.png" alt="" />
-              </button>
-            </div>
-            <div className="__bottom">
-              <img src="../multimedia/img/icons/marketplace/yourlogohere.png" alt="" />
-              <h3>$25,000</h3>
-            </div>
-          </div>
-        </a>
-        <a href="www.google.com" className="__advertisement-carousel">
-          <div className="inner-carousel">
-            <div className="__top">
-              <button type="button">
-                <img src="../multimedia/img/icons/marketplace/followers/10m.png" alt="" />
-              </button>
-              <button type="button">
-                <img src="../multimedia/img/icons/social/light/__twitter-logo.png" alt="" />
-              </button>
-            </div>
-            <div className="__bottom">
-              <img src="../multimedia/img/icons/marketplace/yourlogohere.png" alt="" />
-              <h3>$25,000</h3>
-            </div>
-          </div>
-        </a>
-        <a href="www.google.com" className="__advertisement-carousel">
-          <div className="inner-carousel">
-            <div className="__top">
-              <button type="button">
-                <img src="../multimedia/img/icons/marketplace/followers/10m.png" alt="" />
-              </button>
-              <button type="button">
-                <img src="../multimedia/img/icons/social/light/__snap-logo.png" alt="" />
-              </button>
-            </div>
-            <div className="__bottom">
-              <img src="../multimedia/img/icons/marketplace/yourlogohere.png" alt="" />
-              <h3>$25,000</h3>
-            </div>
-          </div>
-        </a>
-        <a href="www.google.com" className="__advertisement-carousel">
-          <div className="inner-carousel">
-            <div className="__top">
-              <button type="button">
-                <img src="../multimedia/img/icons/marketplace/followers/10m.png" alt="" />
-              </button>
-              <button type="button">
-                <img src="../multimedia/img/icons/social/light/__fb-logo.png" alt="" />
-              </button>
-            </div>
-            <div className="__bottom">
-              <img src="../multimedia/img/icons/marketplace/yourlogohere.png" alt="" />
-              <h3>$25,000</h3>
-            </div>
-          </div>
-        </a>
+import { firstMarketplace, thirdMarketplace } from '../assets/data/marketplaceSections';
 
-      </div>
+const Home = () => (
+  <div className="slider-container grabbing">
+    <div className="slide">
+      <section className="__first-marketplace-section">
+        <div className="__outer-sub-section">
+          <div className="__center-title">
+            <h1>Trending</h1>
+          </div>
+          <div className="__center-sub-section">
+            {firstMarketplace.map((ad) => {
+              const adkey = ad.platformLogo.split('__')[1].split('-logo')[0] + ad.companyLogo.split('marketplace/')[1].split('.png')[0];
+              return (
+                <Advertisement
+                  key={adkey}
+                  followers={ad.followers}
+                  platformLogo={ad.platformLogo}
+                  companyLogo={ad.companyLogo}
+                  price={ad.price}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="__second-marketplace-section">
+        <div className="__outer-sub-section">
+          <div className="__center-title">
+            <h1>Categories</h1>
+          </div>
+          <div className="__center-sub-section">
+            <div className="category__options">
+              <div className="category">
+                <img src="../multimedia/img/icons/marketplace/style-icon.png" alt="" />
+                <h1>
+                  Style
+                </h1>
+              </div>
+              <div className="category">
+                <img src="../multimedia/img/icons/marketplace/tech-icon.png" alt="" />
+                <h1>
+                  Tech
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="__third-marketplace-section">
+        <div className="__outer-sub-section">
+          <div className="__center-title">
+            <h2>1M+ Followers</h2>
+            <a href="../" className="category">
+              <img src="../multimedia/img/icons/marketplace/__More-icon.png" alt="" />
+              <h1>More</h1>
+            </a>
+          </div>
+          <div className="__center-sub-section">
+            {thirdMarketplace.map((ad) => {
+              const adkey = ad.platformLogo.split('__')[1].split('-logo')[0] + ad.companyLogo.split('marketplace/')[1].split('.png')[0];
+              return (
+                <Advertisement
+                  key={adkey}
+                  followers={ad.followers}
+                  platformLogo={ad.platformLogo}
+                  companyLogo={ad.companyLogo}
+                  price={ad.price}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 );
 
 export default Home;

@@ -1,0 +1,17 @@
+.__first-marketplace-section {
+  margin: 3rem 0 0.75rem 0;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  -webkit-animation: fadein ease 1.5s;
+  animation: fadeIn ease 1.5s;
+}
