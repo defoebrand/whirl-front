@@ -19,7 +19,7 @@ const Home = () => (
           <MarketPlaceSection title={section.title} marketPlace={section.marketPlace} />
         </section>
       ))}
-      <footer className="__footer">
+      {/* <footer className="__footer">
         <div className="__center-sub-section">
           <div className="category__options">
             <a href="../post-ad.html" className="category">
@@ -98,7 +98,9 @@ const Home = () => (
           </div>
           <div className="__center-sub-section">
             <div className="__slider">
-              <input id="number692" onInput="outputnumber692.value=addCommas(number692.value)" type="range" lang="en-150" name="number-692" value="0" min="10" max="1000" step="10" />
+              <input id="number692" onInput="outputnumber692.value=addCommas(number692.value)"
+               type="range" lang="en-150" name="number-692" value="0"
+                min="10" max="1000" step="10" />
               <p>
                 $
                 <output name="number-692" id="outputnumber692" htmlFor="number692">10</output>
@@ -117,7 +119,9 @@ const Home = () => (
           </div>
           <div className="__center-sub-section">
             <div className="__slider">
-              <input id="number691" onInput="outputnumber691.value=addCommas(number691.value)" type="range" lang="en-150" name="number-691" value="0" min="10000" max="1000000" step="10000" />
+              <input id="number691" onInput="outputnumber691.value=addCommas(number691.value)"
+               type="range" lang="en-150" name="number-691" value="0"
+                min="10000" max="1000000" step="10000" />
               <p>
                 <output name="number-691" id="outputnumber691" htmlFor="number691">10,000</output>
                 <p2>+</p2>
@@ -179,7 +183,7 @@ const Home = () => (
             </a>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   </div>
 );

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Advertisement = ({
   followers, platformLogo, companyLogo, price,
 }) => (
-  <a href="www.google.com" className="__advertisement-carousel">
+  <div className="__advertisement-carousel">
     <div className="inner-carousel">
       <div className="__top">
         <button type="button">
@@ -19,7 +19,7 @@ const Advertisement = ({
       </div>
     </div>
     <p>@username</p>
-  </a>
+  </div>
 );
 
 Advertisement.propTypes = {
