@@ -2,7 +2,7 @@ import Advertisement from '../components/Advertisement';
 import Category from '../components/Category';
 
 const displaySection = (marketSection) => (
-  marketSection.map((ad) => (
+  marketSection().map((ad) => (
     <Advertisement
       key={ad.followers + ad.platformLogo}
       followers={ad.followers}

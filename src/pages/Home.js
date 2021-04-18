@@ -19,32 +19,24 @@ const Home = () => (
           <MarketPlaceSection title={section.title} marketPlace={section.marketPlace} />
         </section>
       ))}
-      <footer className="__footer">
+      {/* <footer className="__footer">
         <div className="__center-sub-section">
           <div className="category__options">
             <a href="../post-ad.html" className="category">
-              <img src="../multimedia/img/icons/footer/__postad-logo.png" alt="" />
-              <h1>
-                Post Ad
-              </h1>
+              <img src="../images/footer/__postad-logo.png" alt="" />
+              <h1> Post Ad </h1>
             </a>
             <a href="../legal/terms-and-conditions/legal.html" className="category">
-              <img src="../multimedia/img/icons/footer/__terms-logo.png" alt="" />
-              <h1>
-                Terms
-              </h1>
+              <img src="../images/footer/__terms-logo.png" alt="" />
+              <h1>   Terms   </h1>
             </a>
             <a href="../legal/privacy-policy/privacy-policy.html" className="category">
-              <img src="../multimedia/img/icons/footer/__privacy-logo.png" alt="" />
-              <h1>
-                Privacy
-              </h1>
+              <img src="../images/footer/__privacy-logo.png" alt="" />
+              <h1>     Privacy   </h1>
             </a>
             <a href="../legal/cookie-notice/cookies.html" className="category">
-              <img src="../multimedia/img/icons/footer/__cookies-logo.png" alt="" />
-              <h1>
-                Cookies
-              </h1>
+              <img src="../images/footer/__cookies-logo.png" alt="" />
+              <h1>   Cookies   </h1>
             </a>
           </div>
         </div>
@@ -59,37 +51,37 @@ const Home = () => (
           <div className="__center-sub-section">
             <div className="category__options">
               <div className="category">
-                <img src="../multimedia/img/icons/social/light/__youtube-logo.png" alt="" />
+                <img src="../images/social/light/__youtube-logo.png" alt="" />
                 <h1>
                   YouTube
                 </h1>
               </div>
               <div className="category">
-                <img src="../multimedia/img/icons/social/light/__tiktok-logo.png" alt="" />
+                <img src="../images/social/light/__tiktok-logo.png" alt="" />
                 <h1>
                   TikTok
                 </h1>
               </div>
               <div className="category">
-                <img src="../multimedia/img/icons/social/light/__instagram-logo.png" alt="" />
+                <img src="../images/social/light/__instagram-logo.png" alt="" />
                 <h1>
                   Instagram
                 </h1>
               </div>
               <div className="category">
-                <img src="../multimedia/img/icons/social/light/__twitter-logo.png" alt="" />
+                <img src="../images/social/light/__twitter-logo.png" alt="" />
                 <h1>
                   Twitter
                 </h1>
               </div>
               <div className="category">
-                <img src="../multimedia/img/icons/social/light/__snap-logo.png" alt="" />
+                <img src="../images/social/light/__snap-logo.png" alt="" />
                 <h1>
                   SnapChat
                 </h1>
               </div>
               <div className="category">
-                <img src="../multimedia/img/icons/social/light/__fb-logo.png" alt="" />
+                <img src="../images/social/light/__fb-logo.png" alt="" />
                 <h1>
                   Facebook
                 </h1>
@@ -106,7 +98,9 @@ const Home = () => (
           </div>
           <div className="__center-sub-section">
             <div className="__slider">
-              <input id="number692" onInput="outputnumber692.value=addCommas(number692.value)" type="range" lang="en-150" name="number-692" value="0" min="10" max="1000" step="10" />
+              <input id="number692" onInput="outputnumber692.value=addCommas(number692.value)"
+               type="range" lang="en-150" name="number-692" value="0"
+                min="10" max="1000" step="10" />
               <p>
                 $
                 <output name="number-692" id="outputnumber692" htmlFor="number692">10</output>
@@ -125,7 +119,9 @@ const Home = () => (
           </div>
           <div className="__center-sub-section">
             <div className="__slider">
-              <input id="number691" onInput="outputnumber691.value=addCommas(number691.value)" type="range" lang="en-150" name="number-691" value="0" min="10000" max="1000000" step="10000" />
+              <input id="number691" onInput="outputnumber691.value=addCommas(number691.value)"
+               type="range" lang="en-150" name="number-691" value="0"
+                min="10000" max="1000000" step="10000" />
               <p>
                 <output name="number-691" id="outputnumber691" htmlFor="number691">10,000</output>
                 <p2>+</p2>
@@ -162,32 +158,32 @@ const Home = () => (
         <div className="__center-sub-section">
           <div className="category__options">
             <a href="../marketplace.html" className="category">
-              <img src="../multimedia/img/icons/footer/__marketplace-logo.png" alt="" />
+              <img src="../images/footer/__marketplace-logo.png" alt="" />
               <h1>
                 Marketplace
               </h1>
             </a>
             <a href="../legal/terms-and-conditions/legal.html" className="category">
-              <img src="../multimedia/img/icons/footer/__terms-logo.png" alt="" />
+              <img src="../images/footer/__terms-logo.png" alt="" />
               <h1>
                 Terms
               </h1>
             </a>
             <a href="../legal/privacy-policy/privacy-policy.html" className="category">
-              <img src="../multimedia/img/icons/footer/__privacy-logo.png" alt="" />
+              <img src="../images/footer/__privacy-logo.png" alt="" />
               <h1>
                 Privacy
               </h1>
             </a>
             <a href="../legal/cookie-notice/cookies.html" className="category">
-              <img src="../multimedia/img/icons/footer/__cookies-logo.png" alt="" />
+              <img src="../images/footer/__cookies-logo.png" alt="" />
               <h1>
                 Cookies
               </h1>
             </a>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   </div>
 );
